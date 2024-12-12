@@ -81,7 +81,7 @@ cd models
     ```
     python ./vilt/ehr_ecg_utils/normalizer_states.py with task_finetune_ehr_ecg_cxr
     ```
-2. Download the [pre-trained weights](https://github.com/dandelin/ViLT/releases/download/200k/vilt_200k_mlm_itm.ckpt) of ViLT and move it to the `models/vilt` directory.
+2. Download the [pre-trained weights](https://github.com/dandelin/ViLT/releases/download/200k/vilt_200k_mlm_itm.ckpt) of ViLT and move it to the `./vilt` directory.
 3. Finetune the model on all three modalities or without the ECG modality. This will store the best model checkpoints as .ckpt files under the `./results/vilt/D_E+C+G` and `./results/vilt/D_E+C` directories, respectively:
     ```
     python run_vilt.py with task_finetune_ehr_ecg_cxr \
