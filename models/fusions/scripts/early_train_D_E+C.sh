@@ -1,0 +1,12 @@
+python run_fusions.py \
+--gpu_device 0 \
+--modalities EHR+CXR \
+--mode train \
+--stage finetune_early \
+--data_root ../D_E+C+G \
+--save_dir ./results/fusions/early/D_E+C \
+--layers 1 \
+--vision_backbone resnet50 \
+--pretrained \
+--load_state_ehr ./results/fusions/early/ehr_encoder/best_checkpoint.pth.tar \
+--load_state_cxr ./results/fusions/early/cxr_encoder/best_checkpoint.pth.tar
