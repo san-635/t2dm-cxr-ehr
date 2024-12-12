@@ -1,0 +1,7 @@
+name: t2dm-cxr-ehr-m
+
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - -r requirements.txt
