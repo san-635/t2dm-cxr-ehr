@@ -1,0 +1,9 @@
+LEVEL2,LEVEL1,OUTLIER LOW,VALID LOW,IMPUTE,VALID HIGH,OUTLIER HIGH
+Diastolic blood pressure,,0,0,70,300,325
+Heart rate,,0,0,85,350,390
+Height,,0,0,170,240,275
+Respiratory rate,,0,0,15,300,330
+Systolic blood pressure,,0,0,105,350,375
+Temperature,,14,26,37,45,47
+Urine output,,0,0,80,1200,2400
+Weight,,0,0,75,250,285

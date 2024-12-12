@@ -1,0 +1,34 @@
+LEVEL2,LEVEL1,STATUS NOTE,ITEMID,MIMIC LABEL,UNITNAME,LINKSTO,COUNT,CATEGORY,FLUID,PARAM_TYPE
+Diastolic blood pressure,Diastolic blood pressure (arterial),,220051,Arterial Blood Pressure diastolic,mmHg,chartevents,1149537,Routine Vital Signs,,Numeric
+Diastolic blood pressure,Diastolic blood pressure (arterial),,225310,ART BP Diastolic,mmHg,chartevents,86507,Routine Vital Signs,,Numeric
+Diastolic blood pressure,Diastolic blood pressure (noninvasive),,220180,Non Invasive Blood Pressure diastolic,mmHg,chartevents,1289885,Routine Vital Signs,,Numeric
+Diastolic blood pressure,Diastolic blood pressure (noninvasive),,224643,Manual Blood Pressure Diastolic Left,mmHg,chartevents,671,Routine Vital Signs,,Numeric
+Diastolic blood pressure,Diastolic blood pressure (noninvasive),,227242,Manual Blood Pressure Diastolic Right,mmHg,chartevents,671,Routine Vital Signs,,Numeric
+Heart Rate,Heart Rate,,220045,Heart Rate,bpm,chartevents,2762225,Routine Vital Signs,,Numeric
+Height,Height,requires unit conversion or checking,226707,Height,Inch,chartevents,12015,General,,Numeric
+Height,Height (cm),,226730,Height (cm),cm,chartevents,12015,General,,Numeric
+Respiratory rate,Respiratory rate,,220210,Respiratory Rate,insp/min,chartevents,2737105,Respiratory,,Numeric
+Respiratory rate,Respiratory rate (spontaneous),,224689,Respiratory Rate (spontaneous),insp/min,chartevents,452937,Respiratory,,Numeric
+Respiratory rate,Respiratory rate (total),,224690,Respiratory Rate (Total),insp/min,chartevents,399752,Respiratory,,Numeric
+Systolic blood pressure,Systolic blood pressure (arterial),,220050,Arterial Blood Pressure systolic,mmHg,chartevents,1149788,Routine Vital Signs,,Numeric
+Systolic blood pressure,Systolic blood pressure (arterial),,225309,ART BP Systolic,mmHg,chartevents,86557,Routine Vital Signs,,Numeric
+Systolic blood pressure,Systolic blood pressure (noninvasive),,220179,Non Invasive Blood Pressure systolic,mmHg,chartevents,1290488,Routine Vital Signs,,Numeric
+Systolic blood pressure,Systolic blood pressure (noninvasive),,224167,Manual Blood Pressure Systolic Left,mmHg,chartevents,740,Routine Vital Signs,,Numeric
+Systolic blood pressure,Systolic blood pressure (noninvasive),,227243,Manual Blood Pressure Systolic Right,mmHg,chartevents,541,Routine Vital Signs,,Numeric
+Temperature,Temperature (C),,223762,Temperature Celsius,?C,chartevents,74144,Routine Vital Signs,,Numeric
+Temperature,Temperature (F),requires unit conversion or checking,223761,Temperature Fahrenheit,?F,chartevents,522143,Routine Vital Signs,,Numeric
+Urine output,R Ureteral Stent,,226557,R Ureteral Stent,mL,outputevents,46255,Output,,Numeric
+Urine output,L Ureteral Stent,,226558,L Ureteral Stent,mL,outputevents,46255,Output,,Numeric
+Urine output,Foley,,226559,Foley,mL,outputevents,1186717,Output,,Numeric
+Urine output,Void,,226560,Void,mL,outputevents,5928,Output,,Numeric
+Urine output,Condom Cath,,226561,Condom Cath,mL,outputevents,5928,Output,,Numeric
+Urine output,Suprapubic,,226563,Suprapubic,mL,outputevents,5928,Output,,Numeric
+Urine output,R Nephrostomy,,226564,R Nephrostomy,mL,outputevents,5928,Output,,Numeric
+Urine output,L Nephrostomy,,226565,L Nephrostomy,mL,outputevents,5928,Output,,Numeric
+Urine output,Straight Cath,,226567,Straight Cath,mL,outputevents,5928,Output,,Numeric
+Urine output,Ileoconduit,,226584,Ileoconduit,mL,outputevents,5928,Output,,Numeric
+Urine output,GU Irrigant Volume In,,227488,GU Irrigant Volume In,mL,outputevents,5928,Output,,Numeric
+Urine output,GU Irrigant/Urine Volume Out,,227489,GU Irrigant/Urine Volume Out,mL,outputevents,5928,Output,,Numeric
+Weight,Weight (daily),,224639,Daily Weight,kg,chartevents,46452,General,,Numeric
+Weight,"Weight (kg, admission)",,226512,Admission Weight (Kg),kg,chartevents,22604,General,,Numeric
+Weight,"Weight (lbs, admission)",requires unit conversion or checking,226531,Admission Weight (lbs.),None,chartevents,46255,General,,Numeric
