@@ -1,0 +1,27 @@
+{
+  "ts_variables": [
+    "Diastolic blood pressure",
+    "Heart Rate",
+    "Height",
+    "Respiratory rate",
+    "Systolic blood pressure",
+    "Temperature",
+    "Urine output",
+    "Weight"
+  ],
+  "non_ts_variables": [
+    "gender",
+    "age",
+    "family_history"
+  ],
+  "normal_values": {
+    "Diastolic blood pressure": "70.0",
+    "Heart Rate": "85.0",
+    "Height": "170.0",
+    "Respiratory rate": "15.0",
+    "Systolic blood pressure": "105.0",
+    "Temperature": "37.0",
+    "Urine output": "80.0",
+    "Weight": "75.0"
+  }
+}
