@@ -13,9 +13,6 @@
 
 # Background
 The imperative for early detection of type 2 diabetes mellitus (T2DM) is challenged by its asymptomatic onset and dependence on suboptimal clinical diagnostic tests, contributing to its widespread global prevalence. While research into noninvasive T2DM screening tools has advanced, conventional machine learning approaches remain limited to unimodal inputs due to extensive feature engineering requirements. In contrast, deep learning models can leverage multimodal data for a more holistic understanding of patients’ health conditions. However, the potential of chest X-ray (CXR) imaging, one of the most commonly performed medical procedures, remains underexplored. This study evaluates the integration of CXR images with other noninvasive data sources, including electronic health records (EHRs) and electrocardiography signals, for T2DM detection. Utilising datasets meticulously compiled from the MIMIC-IV databases, we investigated two deep fusion paradigms: an early fusion-based multimodal transformer and a modular joint fusion ResNet-LSTM architecture. The end-to-end trained ResNet-LSTM model achieved an AUROC of 0.86, surpassing the CXR-only baseline by 2.3% with just 9863 training samples. These findings demonstrate the diagnostic value of CXRs within multimodal frameworks for identifying at-risk individuals early. Additionally, the release of the dataset preprocessing pipeline enables and supports further research in this domain.
-<div align="center">
-  <img src="figures/overall.png"/>
-</div>
 
 # Environment setup
 1. Clone the repo and navigate to the directory.
@@ -71,42 +68,45 @@ We use three datasets from the PhysioNet platform: [MIMIC-IV version 2.2](https:
     ```
 
 # Model training
-<div align="center">
-  <img src="figures/models.png"/>
-</div>
-
 Navigate to the `models` directory from the repo:
 ```
 cd models
 ```
 ## Early fusion model: multimodal transformer
+<div align="center">
+  <img src="figures/models_early_fusion.png"/>
+</div>
+
 1. Generate pickle files that facilitate standardisation of EHR and ECG data using train set samples:
-```
-python ./vilt/ehr_ecg_utils/normalizer_states.py with task_finetune_ehr_ecg_cxr
-```
+    ```
+    python ./vilt/ehr_ecg_utils/normalizer_states.py with task_finetune_ehr_ecg_cxr
+    ```
 2. Download the [pre-trained weights](https://github.com/dandelin/ViLT/releases/download/200k/vilt_200k_mlm_itm.ckpt) of ViLT and move it to the `models/vilt` directory.
 3. Finetune the model on all three modalities or without the ECG modality. This will store the best model checkpoints as .ckpt files under the `./results/vilt/D_E+C+G` and `./results/vilt/D_E+C` directories, respectively:
-```
-python run_vilt.py with task_finetune_ehr_ecg_cxr \
-                        modalities="EHR+ECG+CXR" \
-                        log_dir = "./results/vilt/D_E+C+G" \
-                        gpu_device=[GPU ID] \
-                        batch_size = 256 \
-                        per_gpu_batchsize = 256
-python run_vilt.py with task_finetune_ehr_ecg_cxr \
-                        modalities="EHR+CXR" \
-                        log_dir = "./results/vilt/D_E+C" \
-                        gpu_device=[GPU ID] \
-                        batch_size = 256 \
-                        per_gpu_batchsize = 256
-```
+    ```
+    python run_vilt.py with task_finetune_ehr_ecg_cxr \
+                            modalities="EHR+ECG+CXR" \
+                            log_dir = "./results/vilt/D_E+C+G" \
+                            gpu_device=[GPU ID] \
+                            batch_size = 256 \
+                            per_gpu_batchsize = 256
+    python run_vilt.py with task_finetune_ehr_ecg_cxr \
+                            modalities="EHR+CXR" \
+                            log_dir = "./results/vilt/D_E+C" \
+                            gpu_device=[GPU ID] \
+                            batch_size = 256 \
+                            per_gpu_batchsize = 256
+    ```
 4. Use `tensorboard` visualisations to monitor training:
-```
-python -m tensorboard.main --logdir ./results/vilt/D_E+C+G
-python -m tensorboard.main --logdir ./results/vilt/D_E+C
-```
+    ```
+    python -m tensorboard.main --logdir ./results/vilt/D_E+C+G
+    python -m tensorboard.main --logdir ./results/vilt/D_E+C
+    ```
 
 ## Joint fusion model: ResNet-LSTM
+<div align="center">
+  <img src="figures/models_joint_fusion.png"/>
+</div>
 ### Early training strategy
 First, pretrain the modality-specific encoders. This will create the `./results/fusions/{ehr/cxr/ecg}_encoder` directories containing the best checkpoints:
 ```
