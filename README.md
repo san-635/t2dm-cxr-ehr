@@ -6,8 +6,7 @@
   * [Environment setup](#environment-setup)
   * [Dataset preprocessing pipeline](#dataset-preprocessing-pipeline)
   * [Model training](#model-training)
-  * [Model evaluation](#model-evaluation)
-  * [Citation](#citation)
+  * [Model evaluation](#model-evaluation) <!-- * [Citation](#citation) -->
   * [Acknowledgements](#acknowledgements)
 <!--te-->
 
@@ -33,9 +32,11 @@ The imperative for early detection of type 2 diabetes mellitus (T2DM) is challen
 
 # Dataset preprocessing pipeline
 We use three datasets from the PhysioNet platform: [MIMIC-IV version 2.2](https://doi.org/10.13026/6mm1-ek67), [MIMIC-CXR-JPG version 2.0.0](https://doi.org/10.13026/8360-t248), and [MIMIC-IV-ECG version 1.0](https://doi.org/10.13026/4nqg-sb35). Please acquire these yourself, following the processes outlined on the platform.
+
 <div align="center">
-  <img src="figures/pipeline.png"/>
+  <img src="figures/pipelines.png" width="600"/>
 </div>
+</br>
 
 1. Navigate to the `pipeline` directory from the repo:
     ```
@@ -74,8 +75,9 @@ cd models
 ```
 ## Early fusion model: multimodal transformer
 <div align="center">
-  <img src="figures/models_early_fusion.png"/>
+  <img src="figures/vilt.png" width="600"/>
 </div>
+</br>
 
 1. Generate pickle files that facilitate standardisation of EHR and ECG data using train set samples:
     ```
@@ -105,8 +107,9 @@ cd models
 
 ## Joint fusion model: ResNet-LSTM
 <div align="center">
-  <img src="figures/models_joint_fusion.png"/>
+  <img src="figures/fusions.png" width="600"/>
 </div>
+
 ### Early training strategy
 First, pretrain the modality-specific encoders. This will create the `./results/fusions/{ehr/cxr/ecg}_encoder` directories containing the best checkpoints:
 ```
@@ -160,7 +163,7 @@ sh ./fusions/scripts/joint_test_D_E+C+G.sh
 sh ./fusions/scripts/joint_test_D_E+C.sh
 ```
 
-# Citation
+<!-- # Citation
 If you find this work useful for your research, please cite:
 ```
 @article{gundapaneni2024,
@@ -172,7 +175,7 @@ If you find this work useful for your research, please cite:
   url = {},
 }
 ```
-Please be sure to also cite the data sources: [MIMIC-IV](https://doi.org/10.13026/6mm1-ek67), [MIMIC-CXR-JPG](https://doi.org/10.13026/8360-t248), and [MIMIC-IV-ECG](https://doi.org/10.13026/4nqg-sb35).
+Please be sure to also cite the data sources: [MIMIC-IV](https://doi.org/10.13026/6mm1-ek67), [MIMIC-CXR-JPG](https://doi.org/10.13026/8360-t248), and [MIMIC-IV-ECG](https://doi.org/10.13026/4nqg-sb35). -->
 
 # Acknowledgements
 This work incorporates code from the following sources:
