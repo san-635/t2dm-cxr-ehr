@@ -163,19 +163,20 @@ sh ./fusions/scripts/joint_test_D_E+C+G.sh
 sh ./fusions/scripts/joint_test_D_E+C.sh
 ```
 
-<!-- # Citation
+# Citation
 If you find this work useful for your research, please cite:
 ```
 @article{gundapaneni2024,
-  author = {Gundapaneni, Sanjana and Zhi, Zhou and Rodrigues, Miguel},
+  author = {Gundapaneni, Sanjana and Zhi, Zhuo and Rodrigues, Miguel},
   title = {{Deep Learning-Based Noninvasive Screening of Type 2 Diabetes with Chest X-ray Images and Electronic Health Records}},
-  journal = {},
+  journal = {arXiv preprint},
+  month = {Dec.},
   year = {2024},
-  doi = {},
-  url = {},
+  doi = {https://doi.org/10.48550/arXiv.2412.10955},
+  url = {https://arxiv.org/abs/2412.10955},
 }
 ```
-Please be sure to also cite the data sources: [MIMIC-IV](https://doi.org/10.13026/6mm1-ek67), [MIMIC-CXR-JPG](https://doi.org/10.13026/8360-t248), and [MIMIC-IV-ECG](https://doi.org/10.13026/4nqg-sb35). -->
+Please be sure to also cite the data sources: [MIMIC-IV](https://doi.org/10.13026/6mm1-ek67), [MIMIC-CXR-JPG](https://doi.org/10.13026/8360-t248), and [MIMIC-IV-ECG](https://doi.org/10.13026/4nqg-sb35).
 
 # Acknowledgements
 This work incorporates code from the following sources:
