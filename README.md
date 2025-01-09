@@ -6,7 +6,8 @@
   * [Environment setup](#environment-setup)
   * [Dataset preprocessing pipeline](#dataset-preprocessing-pipeline)
   * [Model training](#model-training)
-  * [Model evaluation](#model-evaluation) <!-- * [Citation](#citation) -->
+  * [Model evaluation](#model-evaluation)
+  * [Citation](#citation)
   * [Acknowledgements](#acknowledgements)
 <!--te-->
 
